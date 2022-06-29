@@ -1,0 +1,13 @@
+name: MTSvieweR_demo
+title: MTSvieweR_demo
+username:
+account: mtsviewer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5930790
+bundleId: 5724521
+url: https://mtsviewer.shinyapps.io/MTSvieweR_demo/
+when: 1648165367.87818
+lastSyncTime: 1648165367.87818
+asMultiple: FALSE
+asStatic: FALSE

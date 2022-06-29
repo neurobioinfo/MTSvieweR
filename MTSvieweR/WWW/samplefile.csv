@@ -1,0 +1,7 @@
+Uniprot,Gene,amino.acid,HGVSc_VEP,HGVSp_VEP,MetaSVM_score,MetaSVM_pred,CADD_raw,CADD_phred,clinvar_clnsig,clinvar_trait,Dataset?,Validated?
+Q9BXM7,PINK1,480,,p.Pro480Gly,,,,,,,Set 1,N
+Q9BXM7,PINK1,484,,p.Gln484Lys,,,,,,,Set 2,N
+Q9BXM7,PINK1,488,,p.Ala488Pro,,,,,,,Set 3,N
+Q9BXM7,PINK1,150,c.449G>A,p.Gly150Asp,0.582,D,3.706359,25.4,Uncertain_significance,"Parkinson_disease_6,_autosomal_recessive_early-onset",,
+O95140,MFN2,550,,p.Thr550Ala,,,,,,,Set 4,N
+O95140,MFN2,548,,p.Gly548Pro,,,,,,,Set 5,N
