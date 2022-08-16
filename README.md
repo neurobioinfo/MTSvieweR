@@ -1,5 +1,5 @@
 # MTSvieweR
-Welcome to MTSviewer, a database of mitochondrial proteins integrating. 
+Welcome to MTSviewer, a database for the study of mitochondrial proteins which integrates AlphaFold stuctures, cleavage predictions, N-terminomics, and genetic variants.  
 
 ## Features
 - MTS predictions
@@ -11,7 +11,7 @@ Welcome to MTSviewer, a database of mitochondrial proteins integrating.
 
 It is accessible via [https://neurobioinfo.github.io/MTSvieweR](https://neurobioinfo.github.io/MTSvieweR)
 
-All of the raw data is accessible via GitHub or [Google Drive](https://drive.google.com/drive/folders/1L32pcbeUH-WR8ZTU4xTFvDV0XxG1WPbr?usp=sharing).
+[All of the raw data and in-house Python scripts used in the MTSviewer build are accessible and free to download.](https://drive.google.com/drive/folders/1L32pcbeUH-WR8ZTU4xTFvDV0XxG1WPbr?usp=sharing).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/neurobioinfo/MTSvieweR/blob/main/LICENSE) file for details
