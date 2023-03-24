@@ -1,18 +1,18 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-- family-names: "Andrew N."
-  given-names: "Bayne"
-- family-names: "Jing"
-  given-names: "Jing Dong"
+- family-names: "Bayne"
+  given-names: "Andrew N."
+- family-names: "Dong"
+  given-names: "Jing"
 - family-names: "Amiri"
   given-names: "Saeid"
   orcid: "https://orcid.org/0000-0003-2028-092X"
-- family-names: "Sali M.K."
-  given-names: "Farhan"
-- family-names: "Jean-Francois"
-  given-names: "Trempe"
+- family-names: "Farhan"
+  given-names: "Sali M.K."
+- family-names: "Trempe"
+  given-names: "Jean-Francois"
 title: "MTSviewer, a database for the study of mitochondrial proteins which integrates AlphaFold stuctures, cleavage predictions, N-terminomics, and genetic variants."
-version: 1.0
+version: 1.0.1
 date-released: 2023-03-24
 url: "https://neurobioinfo.github.io/MTSvieweR"
