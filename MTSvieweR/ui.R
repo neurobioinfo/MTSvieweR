@@ -22,20 +22,19 @@ fluidPage(
     id = "mainTabsetPanel",
     tabPanel("Home",br(), br(),
              mainPanel(box(
-               h4("Welcome to MTSviewer, a database of human and yeast mitochondrial proteins integrating: "),br(),
-               "  - MTS and cleavage site predictions", br(), 
+               h4("Welcome to MTSviewer, a database of mitochondrial proteins integrating: "),br(),
+               "  - MTS predictions", br(), 
+               "  - MPP cleavage sites", br(),
                "  - Genetic variants", br(),
                "  - Pathogenicity predictions", br(),
                "  - N-terminomics data", br(),
                "  - Structural visualization using AlphaFold models", br(), br(),
                
-               tags$a("Click here for a PDF user guide to teach you how to use MTSviewer and all of its functions!", href="userguide.pdf"), br(),
-               
                h4("Using this platform, we have generated a list of disease-linked variants in protein MTS's and their predicted consequences as a resource for their functional characterization. 
                Overall, MTSviewer is a platform that can be used to interrogate MTS mutations and their potential effects on import and proteolysis across the mitochondrial proteome.", br(), br(),
                   "Click on the MTSviewer tab and start interrogating your favorite protein(s)  listed in the dropdown menu!", br(), br(), br()), width = 8),
                
-               tags$img(style = "width:800px", src="GA.png"),
+               tags$img(style = "width:800px", src="GA2.png"),
                tags$div(style="line-height:25%;", br())
                
              )
@@ -69,8 +68,7 @@ fluidPage(
                          accept = c(".csv")
                ), 
                
-               a(href="samplefile.csv", "Sample Variant File (see FAQ)", download=NA, target="_blank")
-               #downloadLink("samplefile.csv","Sample Variant File (see FAQ)")
+               downloadLink("samplefile","Sample Variant File")
                
                ),
                
@@ -111,13 +109,18 @@ fluidPage(
              
     ),
     
+    tabPanel("MTS counting", 
+             
+             fluidRow(title = "MTS counting", DT::dataTableOutput("MTScounting"))
+    ),
+    
     tabPanel("FAQ", 
              
-             fluidRow(title = "Questions", faq::faq(data=faqdf2, elementId = "faq", faqtitle = "Frequently Asked Questions"))),
+             fluidRow(title = "Questions", faq::faq(data=faqdf, elementId = "faq", faqtitle = "Frequently Asked Questions"))),
     
     tabPanel("Contact us", 
              
-             mainPanel(br(), h4("To report bugs, comments, or to submit custom proteins to be added to MTSviewer, please e-mail: "), a(href="mailto:mtsviewer.docs@gmail.com", h5("mtsviewer.docs@gmail.com")),h5("If you are requesting specific proteins to be added to MTSViewer, please attach a FASTA file of interest."))),
+             mainPanel(br(), h4("To report bugs, comments, or to submit custom proteins to be added to MTSviewer, please e-mail: "), a(href="mailto:mtsviewer.docs@gmail.com", h5("mtsviewer.docs@gmail.com")),h5("If you are requesting specific proteins to be added to MTSViewer, please attach a FASTA file of interest. Requests will be processed on a biweekly basis."))),
     
     
     tabPanel("How to cite us", 

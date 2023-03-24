@@ -41,7 +41,7 @@ shinyServer(function(input, output,session) {
       
     },
     error = function(cond) {
-      shinyalert("Error: Failed to read csv. Please ensure that the Uniprot IDs match, the correct header names are used, and amino acid changes are reported as: p.Leu23Arg")
+      shinyalert("Error: Failed to read csv. Please ensure that the correct header names are used and amino acid changes are reported using the following format: p.Leu23Arg")
     })
     
   })
@@ -104,20 +104,24 @@ shinyServer(function(input, output,session) {
       }
 
       if (count %% 10 == 0 && count == 0){
+        #seqoutput = paste(seqoutput,"   ", toString(count+1),"   ", sep="   ")
         seqoutput = paste(seqoutput,"&nbsp;&nbsp;&nbsp;&nbsp;", toString(count+1),"&nbsp;", sep="")
       }
 
 
       if (count %% 10 == 0 && count < 100 && count > 9){
+        #seqoutput = paste(seqoutput,"   ", toString(count+1),"   ", sep="   ")
         seqoutput = paste(seqoutput,"&nbsp;&nbsp;&nbsp;", toString(count+1),"&nbsp;", sep="")
       }
 
       if (count %% 10 == 0 && count < 1000 && count > 99){
+        #seqoutput = paste(seqoutput,"   ", toString(count+1),"   ", sep="   ")
         seqoutput = paste(seqoutput,"&nbsp;&nbsp;", toString(count+1),"&nbsp;", sep="")
       }
 
 
       if (count %% 10 == 0 && count > 999){
+        #seqoutput = paste(seqoutput,"   ", toString(count+1),"   ", sep="   ")
         seqoutput = paste(seqoutput,"&nbsp;", toString(count+1),"&nbsp;", sep="")
       }
 
@@ -146,6 +150,10 @@ shinyServer(function(input, output,session) {
     DT::datatable(XYC_HY, options = list(order = list(3,'desc'), pageLength = 1000))
   })
   
+  ###MTS counting page###
+  output$MTScounting = DT::renderDataTable({
+    DT::datatable(MTScounting, options = list(order = list(6,'desc'), pageLength = 1000))
+  })
   
   ###Alpha fold or iMTS legend###
   output$legend <- renderImage({
@@ -206,22 +214,22 @@ shinyServer(function(input, output,session) {
     else{
       uncert <- XYCG_data$g
     }
-    temp1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
-    temp2=temp1[!is.na(temp1[,3]),]
-    structure_mutations <- ""
-    for (n in 1:nrow(temp2)){
-      aa <- temp2[n, "amino.acid"]
-      clinsig <- temp2[n,"label"]
+    placeholder1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
+    placeholder2=placeholder1[!is.na(placeholder1[,3]),]
+    x <- ""
+    for (n in 1:nrow(placeholder2)){
+      aa <- placeholder2[n, "amino.acid"]
+      clinsig <- placeholder2[n,"label"]
       
       
       if(toString(clinsig)=="Pathogenic"){
         
-        structure_mutations = paste(structure_mutations, " or ", aa, sep = "")
+        x = paste(x, " or ", aa, sep = "")
       }
     }
 
-    if(("Pathogenic" %in% input$Variant)&(structure_mutations!="")){
-        Pathogenic=structure_mutations
+    if(("Pathogenic" %in% input$Variant)&(x!="")){
+        Pathogenic=x
       }
     else{
       Pathogenic = 0
@@ -238,21 +246,21 @@ shinyServer(function(input, output,session) {
     else{
       uncert <- XYCG_data$g
     }
-    temp1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
-    temp2=temp1[!is.na(temp1[,3]),]
+    placeholder1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
+    placeholder2=placeholder1[!is.na(placeholder1[,3]),]
     
-    structure_mutations <- ""
-    for (n in 1:nrow(temp2)){
-      aa <- temp2[n, "amino.acid"]
-      clinsig <- temp2[n,"label"]
+    x <- ""
+    for (n in 1:nrow(placeholder2)){
+      aa <- placeholder2[n, "amino.acid"]
+      clinsig <- placeholder2[n,"label"]
       
       if(toString(clinsig)=="Benign"){
-        structure_mutations = paste(structure_mutations, " or ", aa, sep = "")
+        x = paste(x, " or ", aa, sep = "")
       }
     }
     
-    if(("Benign" %in% input$Variant)&(structure_mutations!="")){
-      Benign=structure_mutations
+    if(("Benign" %in% input$Variant)&(x!="")){
+      Benign=x
     }
     else{
       Benign = 0
@@ -267,21 +275,21 @@ shinyServer(function(input, output,session) {
     else{
       uncert <- XYCG_data$g
     }
-    temp1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
-    temp2=temp1[!is.na(temp1[,3]),]
+    placeholder1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
+    placeholder2=placeholder1[!is.na(placeholder1[,3]),]
     
-    structure_mutations <- ""
-    for (n in 1:nrow(temp2)){
-      aa <- temp2[n, "amino.acid"]
-      clinsig <- temp2[n,"label"]
+    x <- ""
+    for (n in 1:nrow(placeholder2)){
+      aa <- placeholder2[n, "amino.acid"]
+      clinsig <- placeholder2[n,"label"]
       
       if(toString(clinsig)=="Uncertain"){
         
-        structure_mutations = paste(structure_mutations, " or ", aa, sep = "")
+        x = paste(x, " or ", aa, sep = "")
       }
     }
-    if(("Uncertain" %in% input$Variant)&(structure_mutations!="")){
-      Uncertain=structure_mutations
+    if(("Uncertain" %in% input$Variant)&(x!="")){
+      Uncertain=x
     }
     else{
       Uncertain = 0
@@ -298,21 +306,21 @@ shinyServer(function(input, output,session) {
     else{
       uncert <- XYCG_data$g
     }
-    temp1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
+    placeholder1<-uncert[uncert[,"Uniprot"]==uniprot$a,]
 
-    structure_mutations <- ""
-    for (n in 1:nrow(temp1)){
-      aa <- temp1[n, "amino.acid"]
-      clinsig <- temp1[n,"label"]
+    x <- ""
+    for (n in 1:nrow(placeholder1)){
+      aa <- placeholder1[n, "amino.acid"]
+      clinsig <- placeholder1[n,"label"]
       
       
       if(toString(clinsig)=="User"){
         
-        structure_mutations = paste(structure_mutations, " or ", aa, sep = "")
+        x = paste(x, " or ", aa, sep = "")
       }
     }
-    if(("User" %in% input$Variant)&(structure_mutations!="")){
-      User=structure_mutations
+    if(("User" %in% input$Variant)&(x!="")){
+      User=x
     }
     else{
       User = 0
@@ -389,13 +397,12 @@ shinyServer(function(input, output,session) {
     
   })
   
-  
   output$MitoFates = DT::renderDataTable({
     DT::datatable(MitoFates_HY[MitoFates_HY[,"Uniprot"]==uniprot$a,], options = list(scrollX = TRUE, searching = FALSE, paging = FALSE))
   })
   
   output$mutations = DT::renderDataTable({
-    DT::datatable(datamutations(), options = list(order = list(2, 'asc'), scrollX = TRUE))
+    DT::datatable(datamutations(), options = list(order = list(3, 'asc'), scrollX = TRUE))
   })
   
 
@@ -404,7 +411,6 @@ shinyServer(function(input, output,session) {
   })
 
 
-  
   output$TargetP = DT::renderDataTable({
     DT::datatable(TargetP_HY[TargetP_HY[,"Uniprot"]==uniprot$a,], options = list(scrollX = TRUE, searching = FALSE, paging = FALSE))
   })
@@ -576,6 +582,7 @@ shinyServer(function(input, output,session) {
           list(
             name = "selAround",
             sele = input$structure_selAround
+            #colorValue = "yellow"
           )
       )%>%
       
@@ -645,7 +652,7 @@ shinyServer(function(input, output,session) {
       )
   })
   
-  ###Communication between plotly and NglViewer###
+  ###Communication between plotly and ngl###
   
   clk = reactive({
     
