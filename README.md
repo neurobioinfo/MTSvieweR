@@ -1,6 +1,12 @@
 # MTSvieweR
 Welcome to MTSviewer, a database for the study of mitochondrial proteins which integrates AlphaFold stuctures, cleavage predictions, N-terminomics, and genetic variants.  
 
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7768427.svg)](https://doi.org/10.5281/zenodo.7768427)
+
+
+
 ## Features
 - MTS predictions
 - MPP cleavage sites
