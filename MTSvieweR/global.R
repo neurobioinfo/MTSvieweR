@@ -1,4 +1,4 @@
-# Dashboard v 0.11, 2021/11/16
+# Dashboard v 1.0, 2022/03/23
 # Developers: Andrew Bayne (andrew.bayne@mail.mcgill.ca), Jing Dong (jing.dong2@mail.mcgill.ca), and Saeid Amiri (saeid.amiri@mcgill.ca)
 
 # install.packages("devtools")
