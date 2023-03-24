@@ -13,6 +13,6 @@ authors:
 - family-names: "Jean-Francois"
   given-names: "Trempe"
 title: "MTSviewer, a database for the study of mitochondrial proteins which integrates AlphaFold stuctures, cleavage predictions, N-terminomics, and genetic variants."
-version: 0.1.0
+version: 1.0
 date-released: 2023-03-24
 url: "https://neurobioinfo.github.io/MTSvieweR"
