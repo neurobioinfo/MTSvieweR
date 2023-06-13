@@ -19,5 +19,7 @@ It is accessible via [https://neurobioinfo.github.io/MTSvieweR](https://neurobio
 
 [All of the raw data and in-house Python scripts used in the MTSviewer build are accessible and free to download.](https://drive.google.com/drive/folders/1L32pcbeUH-WR8ZTU4xTFvDV0XxG1WPbr?usp=sharing).
 
+:hammer: **Please note: if you only scroll through the "Gene List", the list will be truncated alphabetically after all genes starting with S. To overcome this, you must search your gene of interest, or type the beginning letter and all of the genes will be available!**
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/neurobioinfo/MTSvieweR/blob/main/LICENSE) file for details
