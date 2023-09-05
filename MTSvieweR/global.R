@@ -5,8 +5,8 @@
 # devtools::install_github("tidyverse/magrittr")
 # install.packages("scales")
 # install.packages("tidyverse")
-install.packages("remotes")
-remotes::install_github("nvelden/NGLVieweR")
+# install.packages("remotes")
+# remotes::install_github("nvelden/NGLVieweR")
 
 library(shiny)
 library(shinydashboard)
