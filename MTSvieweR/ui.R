@@ -120,13 +120,17 @@ fluidPage(
     
     tabPanel("Contact us", 
              
-             mainPanel(br(), h4("To report bugs, comments, or to submit custom proteins to be added to MTSviewer, please e-mail: "), a(href="mailto:mtsviewer.docs@gmail.com", h5("mtsviewer.docs@gmail.com")),h5("If you are requesting specific proteins to be added to MTSViewer, please attach a FASTA file of interest. Requests will be processed on a biweekly basis."))),
+             mainPanel(br(), h4("To report bugs, comments, or to submit custom proteins to be added to MTSviewer, please e-mail: "), a(href="mailto:mtsviewer.docs@gmail.com", h5("mtsviewer.docs@gmail.com")),h5("If you are requesting specific proteins to be added to MTSViewer, please attach a FASTA file of interest."))),
     
     
     tabPanel("How to cite us", 
-             mainPanel(br(), h4("When using MTSviewer please cite: "), h5("MTSviewer: a database to visualize mitochondrial targeting sequences, cleavage sites, and mutations on protein structures
-Andrew N. Bayne, Jing Dong, Saeid Amiri, Sali M.K. Farhan, Jean-Francois Trempe
-bioRxiv 2021.11.25.470064;doi: https://doi.org/10.1101/2021.11.25.470064")))
+             mainPanel(
+               br(),
+               h4("When using MTSviewer please cite:"),
+               h5(HTML("MTSviewer: a database to visualize mitochondrial targeting sequences, cleavage sites, and mutations on protein structures<br>Andrew N. Bayne, Jing Dong, Saeid Amiri, Sali M.K. Farhan, Jean-Francois Trempe (2023)<br>PLOS ONE 18(4): e0284541.<br>DOI: <a href='https://doi.org/10.1371/journal.pone.0284541'>https://doi.org/10.1371/journal.pone.0284541</a>"))
+             )
+    )
+    
   )
 )
 
