@@ -1,4 +1,5 @@
 fluidPage(
+tags$head(includeHTML(("google-analytics.html"))),
   titlePanel(
     title = 
       tags$a( target = "_blank",
@@ -124,13 +125,7 @@ fluidPage(
     
     
     tabPanel("How to cite us", 
-             mainPanel(
-               br(),
-               h4("When using MTSviewer please cite:"),
-               h5(HTML("MTSviewer: a database to visualize mitochondrial targeting sequences, cleavage sites, and mutations on protein structures<br>Andrew N. Bayne, Jing Dong, Saeid Amiri, Sali M.K. Farhan, Jean-Francois Trempe (2023)<br>PLOS ONE 18(4): e0284541.<br>DOI: <a href='https://doi.org/10.1371/journal.pone.0284541'>https://doi.org/10.1371/journal.pone.0284541</a>"))
-             )
-    )
-    
+             mainPanel(br(), h4("When using MTSviewer please cite: "), h5(HTML("MTSviewer: a database to visualize mitochondrial targeting sequences, cleavage sites, and mutations on protein structures<br>Andrew N. Bayne, Jing Dong, Saeid Amiri, Sali M.K. Farhan, Jean-Francois Trempe (2023)<br>PLOS ONE 18(4): e0284541.<br>DOI: <a href='https://doi.org/10.1371/journal.pone.0284541'>https://doi.org/10.1371/journal.pone.0284541</a>"))))
   )
 )
 

@@ -1,12 +1,12 @@
-# Dashboard v 1.0.2, 2022/03/24
+# Dashboard v 1.0.3, 2023/09/28
 # Developers: Andrew Bayne (andrew.bayne@mail.mcgill.ca), Jing Dong (jing.dong2@mail.mcgill.ca), and Saeid Amiri (saeid.amiri@mcgill.ca)
 
 # install.packages("devtools")
 # devtools::install_github("tidyverse/magrittr")
 # install.packages("scales")
 # install.packages("tidyverse")
-# install.packages("remotes")
-# remotes::install_github("nvelden/NGLVieweR")
+#install.packages("remotes")
+#remotes::install_github("nvelden/NGLVieweR")
 
 library(shiny)
 library(shinydashboard)
