@@ -6,6 +6,8 @@
 
 Welcome to MTSviewer's repository, a database for the study of mitochondrial proteins which integrates AlphaFold structures, cleavage predictions, N-terminomics, and genetic variants.
 
+:rotating_light: We are working on an improved version of MTSviewer -- for now, the raw iMTS curves and all associated protein level data (for figure generation, follow-up analyses) [can be accessed here](https://www.dropbox.com/scl/fo/qs97tilmwe8ytt2hw3wv4/AL5W4ipxXDuE5ZVIc7jiDOg?rlkey=kf8j2y29y9abzxn0rp8icodqi&e=1&st=qnklc357&dl=0) :rotating_light:
+
 ## Contents
 -  [Features](#features)
 -  [Online Dashboard](#online-dashboard)
